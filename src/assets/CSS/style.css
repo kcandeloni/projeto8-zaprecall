@@ -1,0 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+    font-family: 'Recursive', sans-serif;
+    background: #FB6B6B;
+  }
+
+  ion-icon {
+    font-size: 23px;
+  }
+
