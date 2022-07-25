@@ -13,12 +13,15 @@ body {
 
 .red {
     color: #FF3030;
+    text-decoration: line-through;
 }
 
 .green {
     color: #2FBE34;
+    text-decoration: line-through;
 }
 
 .yellow {
     color: #FF922E;
+    text-decoration: line-through;
 }

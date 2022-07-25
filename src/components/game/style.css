@@ -37,6 +37,10 @@ h1 {
     border-radius: 5px;
 }
 
+.pergunta ion-icon {
+    cursor: pointer;
+}
+
 .inerte {
     display: flex;
     flex-direction: row;
@@ -56,6 +60,7 @@ h3 {
 .seta{
     height: 20px;
     width: 30px;
+    cursor: pointer;
 }
 
 .opcoes{
