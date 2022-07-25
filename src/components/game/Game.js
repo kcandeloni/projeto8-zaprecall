@@ -3,18 +3,14 @@ import logo from '../../assets/ZapRecall-Recursos/logo.png';
 import setinha from '../../assets/ZapRecall-Recursos/setinha.png';
 import React from 'react';
 import Resultado from '../resultado/Resultado';
-
-
+import AddCheckZap from '../addCheck/AddCheckZap';
 
 export default function Game(props) {
     
     const [contador, setContador] = React.useState(0);
-    const [checkZap, setCheckZap] = React.useState({menssagem: '', meta: 4, zaps: [{name: "checkmark-circle",color: "green"}, {name: "checkmark-circle",color: "green"}, {name: "checkmark-circle",color: "green"}]});
-
-    function addcheck (){
-
-    }
-
+    const [checkZap, setCheckZap] = React.useState({status: 0, meta: 4, zaps: []});
+    checkZap.function = setCheckZap;
+    
     return (
         <>
             <div className='topo'>
@@ -33,7 +29,6 @@ export default function Game(props) {
                     <div className='inerte'>
                         <h3>0/4 CONCLUÍDOS</h3>
                             <ion-icon name="play-outline"></ion-icon>
-                            <ion-icon name="close-circle"></ion-icon>
                     </div>    
                 </div>
                 <div className='pergunta'>
@@ -48,13 +43,13 @@ export default function Game(props) {
                         <ion-icon name="checkmark-circle"></ion-icon>
                     </div>
                     <div className='opcoes'>
-                        <div onClick={contador < 4 ? () => setContador(contador + 1): false}>
+                        <div onClick={function (){ if(contador < 4){setContador(contador + 1); AddCheckZap({checkZap}, 'red', 'close-circle')}}}>
                             <p>Não lembrei</p>
                         </div>
-                        <div>
+                        <div onClick={function (){ if(contador < 4){setContador(contador + 1); AddCheckZap({checkZap}, 'yellow', 'help-circle')}}}>
                             <p>Quase não lembrei</p>
                         </div>
-                        <div>
+                        <div onClick={function (){ if(contador < 4){setContador(contador + 1); AddCheckZap({checkZap}, 'green', 'checkmark-circle')}}}>
                             <p>Zap!</p>
                         </div>
                     </div>

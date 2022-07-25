@@ -20,29 +20,6 @@ h1 {
     height: 60px;
     margin-right: 20px;
 }
-
-.resultado {
-    width: 100%;
-    background: #FFFFFF;
-    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.08);
-
-    position: fixed;
-    left: 0;
-    bottom: 0;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.resultado h2 {
-    font-weight: 400;
-    font-size: 18px;
-    color: #333333;
-    margin: 8px 0 0 0;
-}
-
 .perguntas {
     display: flex;
     justify-content: center;
@@ -54,7 +31,7 @@ h1 {
     width: 80vw;
     background-color: #FFFFFF;
     padding: 0px 14px;
-    margin: 6px 0;
+    margin: 8px 0;
 
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
@@ -93,7 +70,6 @@ h3 {
 .opcoes div{
     width: 22vw;
     height: 42px;
-    background: #FF3030;
     border-radius: 5px;
 
     display: flex;
@@ -111,4 +87,16 @@ h3 {
     width: 14vw;
 
     color: #FFFFFF;
+}
+
+.opcoes div:nth-child(1){
+    background-color: #FF3030;
+}
+
+.opcoes div:nth-child(2){
+    background-color: #FF922E;
+}
+
+.opcoes div:nth-child(3){
+    background-color: #2FBE34;
 }

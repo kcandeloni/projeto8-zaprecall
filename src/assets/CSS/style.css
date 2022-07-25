@@ -11,3 +11,14 @@ body {
     font-size: 23px;
   }
 
+.red {
+    color: #FF3030;
+}
+
+.green {
+    color: #2FBE34;
+}
+
+.yellow {
+    color: #FF922E;
+}

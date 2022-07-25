@@ -11,7 +11,7 @@ export default function Resultado ({contador:contador, zaps: zaps, meta: meta}) 
                 <div>
                     {zaps.map(zap => <span className={zap.color}><ion-icon name={zap.name}></ion-icon></span>)}
                 </div>
-                {zaps.length > 3 ? <Link to='../'><div className='botaoReinicia'><h7>REINICIAR RECALL</h7></div></Link>: ''}
+                {zaps.length > 3 ? <Link to='../'><div className='botaoReinicia'><h6>REINICIAR RECALL</h6></div></Link>: ''}
             </div>
     );
 }
