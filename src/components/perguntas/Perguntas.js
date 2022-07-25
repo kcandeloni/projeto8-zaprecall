@@ -27,7 +27,6 @@ function estado02 (pergunta){
 }
 
 function estado03 (pergunta, contador, setContador, checkZap){
-    console.log(contador)
     return(
         <div className='pergunta'>
             <div className='inerte'>

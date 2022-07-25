@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom';
 import './style.css';
 import Mensagem from './Mensagem.js';
+import App from '../../components/App';
 
-export default function Resultado ({contador:contador, zaps: zaps, meta: meta}) {
+function resetaPerguntas (lista){
+    lista.map(function(pergunta){ pergunta.nameIcon = ''; pergunta.color = '';pergunta.function(pergunta.status)})
+    App();
+}
+
+export default function Resultado ({contador:contador, children:listaPerguntas, zaps: zaps, meta: meta}) {
 
     return(
         <div className='resultado'>
@@ -11,7 +17,7 @@ export default function Resultado ({contador:contador, zaps: zaps, meta: meta}) 
                 <div>
                     {zaps.map(zap => <span className={zap.color}><ion-icon name={zap.name}></ion-icon></span>)}
                 </div>
-                {zaps.length > 3 ? <Link to='../'><div className='botaoReinicia'><h6>REINICIAR RECALL</h6></div></Link>: ''}
+                {zaps.length > 3 ? <Link to='../'><div onClick={() => resetaPerguntas(listaPerguntas)} className='botaoReinicia'><h6>REINICIAR RECALL</h6></div></Link>: ''}
             </div>
     );
 }
