@@ -1,10 +1,20 @@
 import './style.css';
 import logo from '../../assets/ZapRecall-Recursos/logo.png';
 import setinha from '../../assets/ZapRecall-Recursos/setinha.png';
+import React from 'react';
+import Resultado from '../resultado/Resultado';
+
 
 
 export default function Game(props) {
     
+    const [contador, setContador] = React.useState(0);
+    const [checkZap, setCheckZap] = React.useState({menssagem: '', meta: 4, zaps: [{name: "checkmark-circle",color: "green"}, {name: "checkmark-circle",color: "green"}, {name: "checkmark-circle",color: "green"}]});
+
+    function addcheck (){
+
+    }
+
     return (
         <>
             <div className='topo'>
@@ -38,7 +48,7 @@ export default function Game(props) {
                         <ion-icon name="checkmark-circle"></ion-icon>
                     </div>
                     <div className='opcoes'>
-                        <div>
+                        <div onClick={contador < 4 ? () => setContador(contador + 1): false}>
                             <p>Não lembrei</p>
                         </div>
                         <div>
@@ -51,9 +61,7 @@ export default function Game(props) {
                 </div>
             </div>
 
-            <div className='resultado'>
-                <h2>0/4 CONCLUÍDOS</h2>
-            </div>
+            <Resultado contador={contador} {...checkZap} />
         </>
     );
   }

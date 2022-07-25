@@ -1,0 +1,58 @@
+.red {
+    color: #FF3030;
+}
+
+.green {
+    color: #2FBE34;
+}
+
+.yellow {
+    color: #FF922E;
+}
+
+.resultado img {
+    width: 23px;
+    height: 23px;
+}
+
+.resultado h4 {
+    font-family: 'Recursive';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    color: #333333;
+    margin: 10px 14px;
+}
+
+.resultado h5 {
+    font-family: 'Recursive';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+    color: #333333;
+    margin: 0 auto;
+    width: 200px;
+}
+
+.tituloResultado{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botaoReinicia {
+    width: 167px;
+    background: #FB6B6B;
+    border-radius: 5px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: #FFFFFF;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
